@@ -1,13 +1,31 @@
-import './App.css';
-//testing for github
+import { ColorModeContext, useMode } from "./theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import Topbar from "./components/pages/global/Topbar";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+// import UserLogin from "./components/pages/UserLogin";
+// import About from "./components/pages/about/About";
+// import Home from "./components/pages/home/Home";
+import { createBrowserRouter,RouterProvider} from "react-router-dom";
+
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
+
 function App() {
+  const [theme, colorMode]= useMode();
+
   return (
-    <div className="App">
-      <header className="App-header">
-      <img src="/images/logo-instinct.png" alt="My Logo" className='logo' style={{ position: 'absolute', top: 20, left: 1780 }}/>
-       
-      </header>
+   <ColorModeContext.Provider value={colorMode}>
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
+
+    <div className="app">
+      <main className="content">
+        <Topbar />
+      </main>
+
     </div>
+    </ThemeProvider>
+   </ColorModeContext.Provider>
   );
 }
 
