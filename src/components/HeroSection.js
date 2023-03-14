@@ -6,7 +6,7 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='/videos/video-2.mp4' autoPlay loop muted />
       <h1>PARKWISE Parking Management</h1>
       <p>Find out which facilities have PARKWISE!</p>
       <div className='hero-btns'>

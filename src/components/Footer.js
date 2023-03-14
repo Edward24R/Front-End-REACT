@@ -8,10 +8,10 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
+          Join the Parkwise network in order to stay up-to-date with our the parkings spots
         </p>
         <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+        
         </p>
         <div className='input-areas'>
           <form>
@@ -21,7 +21,7 @@ function Footer() {
               type='email'
               placeholder='Your Email'
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--outline'>Join</Button>
           </form>
         </div>
       </section>
@@ -46,10 +46,10 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+            
+            <Link to='/'>Tutorials</Link>
+            <Link to='/'>How We Do It</Link>
+      
           </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
@@ -64,11 +64,11 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
+              PARKWISE
               <i class='fab fa-typo3' />
             </Link>
           </div>
-          <small class='website-rights'>TRVL © 2020</small>
+          <small class='website-rights'>PARKWISE © 2020</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'

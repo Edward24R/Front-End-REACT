@@ -156,3 +156,9 @@
     transition: 250ms;
   }
 }
+
+
+.logo-container img {
+  height: 80px;
+  width: auto;
+}
