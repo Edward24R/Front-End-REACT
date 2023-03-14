@@ -1,33 +1,35 @@
-import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import Topbar from "./components/pages/global/Topbar";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
-// import UserLogin from "./components/pages/UserLogin";
-// import About from "./components/pages/about/About";
-// import Home from "./components/pages/home/Home";
+import React from 'react';
+import Navbar from './components/Navbar';
+import './App.css';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Services from './components/pages/Services';
+import Products from './components/pages/Products';
+import SignUp from './components/pages/SignUp';
+import HeroSection from './components/HeroSection';
+import Cards from './components/Cards';
+import Footer from './components/Footer';
 
-//Commiting
-import { createBrowserRouter,RouterProvider} from "react-router-dom";
-
-import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 
 function App() {
-  const [theme, colorMode]= useMode();
-
   return (
-   <ColorModeContext.Provider value={colorMode}>
-    <ThemeProvider theme={theme}>
-    <CssBaseline />
-
-    <div className="app">
-      <main className="content">
-        <Topbar />
-      </main>
-
-    </div>
-    </ThemeProvider>
-   </ColorModeContext.Provider>
+    <>
+    
+      <Router>
+        <Navbar />
+        {/* These go in home */}
+        <HeroSection />
+        <Cards />
+        <Footer />
+        {/* ^ */}
+        <Routes>
+          <Route path='/' exact element={Home} />
+          <Route path='/services' element={Services} />
+          <Route path='/products' element={Products} />
+          <Route path='/sign-up' element={SignUp} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
