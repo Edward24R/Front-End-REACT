@@ -1,13 +1,15 @@
 
 import React from 'react';
-import './Button.css';
+import './SignUpButton.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const Button = ({
+// const handleClick = () => {'/login-in'};
+
+export const SignUpButton = ({
   children,
   type,
   onClick,
@@ -21,14 +23,18 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to='/signup' className='btn-mobile'>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
+        onClick={onClick} //handleClick can be used instead of onClick
         type={type}
+        
       >
-        {children}
+      
+        
+      {children}
+         
       </button>
-    </Link>
+   </Link>  
   );
 };

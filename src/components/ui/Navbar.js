@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import { ButtonLog } from '../Buttons/LogInB';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import IMAGES from '../assets/index';
+import IMAGES from '../../assets/index';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -29,7 +29,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/home' className='navbar-logo' onClick={closeMobileMenu}>
             PARKWISE
             {/* <img src={require(IMAGES.logo) } alt=""/> */}
           </Link>
@@ -39,40 +39,49 @@ function Navbar() {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/services'
+                to='/uprm'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Services
+                UPRM
               </Link>
             </li>
             <li className='nav-item'>
               <Link
-                to='/products'
+                to='/about'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Products
+                About
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/contact'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Contact Us
               </Link>
             </li>
 
             <li>
               <Link
-                to='/sign-up'
+                to='/log-in'
                 className='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
-                Sign Up
+                Log in
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && <ButtonLog buttonStyle='btn--outline'>Log in</ButtonLog>}
         </div>
       </nav>
     </>

@@ -1,15 +1,14 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/ui/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
-import HeroSection from './components/HeroSection';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import LogIn from './components/userPages/LogIn';
+import Home from './components/pages/Home';
+import Uprm from './components/pages/UPRM';
+import Gmaps from './components/pages/Gmaps';
+import SignUp from './components/userPages/SignUp';
 
 function App() {
   return (
@@ -17,16 +16,15 @@ function App() {
     
       <Router>
         <Navbar />
-        {/* These go in home */}
-        <HeroSection />
-        <Cards />
-        <Footer />
-        {/* ^ */}
         <Routes>
-          <Route path='/' exact element={Home} />
-          <Route path='/services' element={Services} />
-          <Route path='/products' element={Products} />
-          <Route path='/sign-up' element={SignUp} />
+          <Route path='/' exact element={<Home/>} />
+          <Route path='/home' exact element={<Home/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/log-in' element={<LogIn/>} />
+          <Route path='/signup' element={<SignUp/>} />
+          <Route path='/uprm' element={<Uprm/>} />
+          <Route path='/gmaps' element={<Gmaps/>} />
         </Routes>
       </Router>
     </>
