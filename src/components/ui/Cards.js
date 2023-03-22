@@ -13,13 +13,19 @@ function Cards() {
               src='images/img-9.jpg'
               text='Try out Parkwise at our Primary Location at UPRM'
               label='Available'
-              path='/about'
+              path='/gmaps'
             />
             <CardItem
               src='images/img-2.jpg'
               text='UPRM: Area Blanca Parking Lot'
               label='Primary'
-              path='/about'
+              path='/parkwise'
+            />
+            <CardItem
+              src='images/img-5.jpg'
+              text='UPRM: Biology Parking Lot'
+              label='Coming Soon'
+              path='/uprm'
             />
           </ul>
           <ul className='cards__items'>
