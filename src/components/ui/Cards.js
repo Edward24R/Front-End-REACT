@@ -13,7 +13,7 @@ function Cards() {
               src='images/img-9.jpg'
               text='Try out Parkwise at our Primary Location at UPRM'
               label='Available'
-              path='/gmaps'
+              path='/uprm'
             />
             <CardItem
               src='images/img-2.jpg'

@@ -1,0 +1,52 @@
+
+.main-container{
+    background-color: rgb(0, 255, 64);
+    background-image: url('../../../public/images/rum-pillars2.jpg');
+    background-size:auto;
+    max-width: 100%;
+    max-height:max-content;
+
+    padding: 1rem;
+
+}
+
+
+.uprm-container {
+    /* background: url('public/images/img-home.jpg') center center/cover no-repeat; */
+    height: 100vh;
+    width: 100%;
+    display:flex; /*grid, flex*/
+    flex-direction: column;
+    justify-content: center; /*center*/
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    /* background-color: #49e316; */
+    
+}
+
+.uprm-container > h1 {
+    color: #49e316;
+    font-size: 100px;
+    margin-top: -600px; /*pos*/
+    z-index: +1;
+}
+  
+.uprm-container > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+    z-index: +1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+}
+
+.uprm-container > img {
+    background-color: blue;
+    object-fit: cover;
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+

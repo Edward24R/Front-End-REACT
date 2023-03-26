@@ -45,11 +45,11 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link
-                to='/uprm'
+                to='/gmaps'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                UPRM
+                P-Maps
               </Link>
             </li>
             <li className='nav-item'>

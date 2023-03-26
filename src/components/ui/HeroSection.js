@@ -8,7 +8,8 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-2.mp4' autoPlay loop muted />
+      {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
+      <img src='/images/rum-pillars2.jpg' />
       <h1>PARKWISE</h1>
       <p>Find out which facilities have PARKWISE!</p>
       <div className='hero-btns'>
@@ -21,14 +22,14 @@ function HeroSection() {
           GET STARTED
         </GetStarted>
 
-        <SignUpButton
+        {/* <SignUpButton
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
           Sign Up 
-        </SignUpButton>
+        </SignUpButton> */}
         
       </div>
     </div>
