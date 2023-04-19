@@ -8,7 +8,7 @@ import coordMarkerLat from '../ui/Grid';
 import coordMarkerLong from '../ui/Grid';
 
 //Google Maps component for Applications
-
+// Improved with Direction Search bar
 import {
   Box,
   Button,
