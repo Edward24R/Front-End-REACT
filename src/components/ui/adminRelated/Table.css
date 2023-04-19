@@ -1,0 +1,57 @@
+.container {
+  padding: 3rem;
+  border-radius: 4px;
+  display: flexbox;
+  font-style:normal;
+  font-size: 12px;
+ 
+}
+.container__h1 {
+  font-size: 2rem;
+  color: #00bf13;
+  margin-bottom: 2rem;
+  font-size: 60px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  flex-wrap: wrap;
+}
+.container .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-bottom: 1.5rem;
+}
+.container button {
+  color: #fff;
+  width: 100%;
+  font-size: 1.2rem;
+  background: #2a27df;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container button:hover {
+  background: rgba(29, 172, 32, 0.8);
+}
+.container .input-error {
+  border-color: #e63946;
+}
+.container .error {
+  color: #e63946;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.container .disabled-btn {
+  cursor: not-allowed;
+  background: rgba(22, 20, 155, 0.8);
+}/*# sourceMappingURL=Table.css.map */

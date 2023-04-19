@@ -2,10 +2,11 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 
+//Card Component for Home Page Locations
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check our Locations!</h1>
+      <h1 className='cardsTxt'>Check Out Our Locations!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -13,11 +14,11 @@ function Cards() {
               src='images/img-9.jpg'
               text='Try out Parkwise at our Primary Location at UPRM'
               label='Available'
-              path='/uprm'
+              path='/parkwise'
             />
             <CardItem
-              src='images/img-2.jpg'
-              text='UPRM: Area Blanca Parking Lot'
+              src='images/adem1.jpg'
+              text='UPRM: Administración de Empresas Parking Lot'
               label='Primary'
               path='/parkwise'
             />
@@ -25,7 +26,7 @@ function Cards() {
               src='images/img-5.jpg'
               text='UPRM: Biology Parking Lot'
               label='Coming Soon'
-              path='/uprm'
+              path='/adminhome'
             />
           </ul>
           <ul className='cards__items'>

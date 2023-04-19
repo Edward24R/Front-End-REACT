@@ -1,37 +1,39 @@
 import React from 'react';
 import './OurCards.css';
-import CardItem from './CardItem';
+import OurCardItem from './OurCardItem';
 
+
+// Development Team member cards component for About Page
 function OurCards() {
   return (
-    <div className='card'>
-      <h1>Development Team</h1>
-      <div className='card__container'>
-        <div className='card__wrapper'>
-          <ul className='card__items'>
+    <div className='ocard'>
+      <h1 className='ocardTxt'>The Development Team</h1>
+      <div className='ocard__container'>
+        <div className='ocard__wrapper'>
+          <ul className='ocard__items'>
             
-            <CardItem
-              src=''
+            <OurCardItem
+              src='images/javier.jpg'
               text='Javier - Project Leader, Full Stack Developer'
               path='/contact'
             />
-            <CardItem
+            <OurCardItem
               src='images/eduardo_profile2.jpeg'
               text='Eduardo Rivera - Full Stack Developer'
               path='/contact'
             />
-            <CardItem
-              src=''
+            <OurCardItem
+              src='images/genesisA.jpg'
               text='Genesis - Full Stack Developer'
               path='/contact'
             />
-            <CardItem
-              src=''
+            <OurCardItem
+              src='images/johnathan.jpg'
               text='Jonathan - Full Stack Developer'
               path='/contact'
             />
           </ul>
-          <ul className='card__items'>
+          <ul className='ocard__items'>
             
           </ul>
         </div>

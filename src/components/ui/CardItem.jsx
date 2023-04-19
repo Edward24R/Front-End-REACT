@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//Component Helper for Home Page Cards
 function CardItem(props) {
   return (
     <>

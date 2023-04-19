@@ -10,7 +10,11 @@ import Uprm from './components/pages/UPRM';
 import Gmaps from './components/pages/Gmaps';
 import SignUp from './components/userPages/SignUp';
 import Parkwise from './components/pages/Parkwise';
-import AdminHome from './components/userPages/AdminHome';
+import AdminHome from './components/admin/AdminHome';
+import CamView from './components/TemporaryJunk/CamView';
+import ForgotPass from './components/userPages/ForgotPass';
+import { ChakraProvider, theme } from '@chakra-ui/react'
+
 
 function App() {
   return (
@@ -24,11 +28,17 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/log-in' element={<LogIn/>} />
+          <Route path='/forgot' element={<ForgotPass/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/uprm' element={<Uprm/>} />
-          <Route path='/gmaps' element={<Gmaps/>} />
+          <Route path='/gmaps' element={
+            <ChakraProvider theme={theme}>
+                <Gmaps/>
+            </ChakraProvider>
+          } />
           <Route path='/parkwise' element={<Parkwise/>} />
           <Route path='/adminhome' element={<AdminHome/>} />
+          <Route path='/camview' element={<CamView/>} />
 
 
           

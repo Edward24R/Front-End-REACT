@@ -1,11 +1,11 @@
 import React from "react";
 import "../../App.css";
 import Footer from "../ui/Footer";
-import HeroSection from "../ui/HeroSection";
+import UiSection from "../ui/UiSection";
 import "./UPRM.css";
 
-// const backgroundPic = new URL()
 
+// Unfinished UPRM info Page
 export default function Uprm() {
   return (
     <>

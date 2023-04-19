@@ -1,14 +1,15 @@
 import React from 'react';
 import '../../App.css';
 import Cards from '../ui/Cards';
-import HeroSection from '../ui/HeroSection';
+import UiSection from '../ui/UiSection';
 import Footer from '../ui/Footer';
 
+//Home page for Application
 function Home() {
   return (
     <>
     <div>
-      <HeroSection />
+      <UiSection />
       <Cards />
       <Footer />
     </div>

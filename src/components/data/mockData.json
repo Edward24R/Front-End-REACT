@@ -1,0 +1,41 @@
+{
+    "chartTitle": "Sample Line Chart",
+    "xAxisLabel": "X-axis Label",
+    "yAxisLabel": "Y-axis Label",
+    "lines": [
+      {
+        "label": "Line 1",
+        "color": "#ff0000",
+        "data": [
+          { "x": 0, "y": 10 },
+          { "x": 1, "y": 20 },
+          { "x": 2, "y": 30 },
+          { "x": 3, "y": 40 },
+          { "x": 4, "y": 50 }
+        ]
+      },
+      {
+        "label": "Line 2",
+        "color": "#00ff00",
+        "data": [
+          { "x": 0, "y": 5 },
+          { "x": 1, "y": 15 },
+          { "x": 2, "y": 25 },
+          { "x": 3, "y": 35 },
+          { "x": 4, "y": 45 }
+        ]
+      },
+      {
+        "label": "Line 3",
+        "color": "#0000ff",
+        "data": [
+          { "x": 0, "y": 2 },
+          { "x": 1, "y": 4 },
+          { "x": 2, "y": 8 },
+          { "x": 3, "y": 16 },
+          { "x": 4, "y": 32 }
+        ]
+      }
+    ]
+  }
+  

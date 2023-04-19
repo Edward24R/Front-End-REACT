@@ -5,6 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import '../../App.css';
 
+//Sign Up Page
 const SignUp=()=>{
 
     const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
@@ -19,28 +20,13 @@ const SignUp=()=>{
                 </Grid>
                 <TextField label='Email' placeholder='Enter email' fullWidth required/>
                 <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>
-                <FormControlLabel
-                    control={
-                    <Checkbox
-                        name="checkedB"
-                        color="primary"
-                    />
-                    }
-                    label="Remember me"
-                 />
+                <TextField label='Confirm Password' placeholder='Enter password' type='re-type password' fullWidth required/>
+                
                 {/* Sign In Button */}
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
 
-                <Typography >
-                     <Link href="#" >
-                        Forgot password ?
-                </Link>
-                </Typography>
-                <Typography > Do you have an account ?
-                     <Link href="#" >
-                        Sign Up 
-                </Link>
-                </Typography>
+                
+        
             </Paper>
         </Grid>
     )

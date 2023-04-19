@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from '../ui/Footer';
 import './Contact.css'
 
+// Contact Info page
 export default function Contact() {
   return (
     <>
@@ -10,10 +11,11 @@ export default function Contact() {
   <div className='contact-container'>
 
   <h1>Contact Us at</h1>
+  <p>For questions or more information about our Parkwise system, contact us at:</p>
   <p>instinct.parkwise@gmail.com</p>
 
-  <form>
-        <label htmlFor="name">Name:</label>
+  {/* <form>
+        <label htmlFor="name" padding = "4rem" >Name:</label>
         <input type="text" id="name" name="name" required />
 
         <label htmlFor="email">Email:</label>
@@ -23,7 +25,7 @@ export default function Contact() {
         <textarea id="message" name="message" required></textarea>
 
         <button type="submit">Send</button>
-      </form>
+      </form> */}
 
 
   </div>

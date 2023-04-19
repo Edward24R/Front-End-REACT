@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import IMAGES from '../../assets/index';
 
+
+// General Navigation Bar for the Web Application
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -31,6 +33,7 @@ function Navbar() {
         <div className='navbar-container'>
           <Link to='/home' className='navbar-logo' onClick={closeMobileMenu}>
             PARKWISE
+            <i class='fab fa-typo3' />
             {/* <img src={require(IMAGES.logo) } alt=""/> */}
           </Link>
           
@@ -89,3 +92,11 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+function vLink(){
+
+
+}
+
+// to={`/${vLink()}`}

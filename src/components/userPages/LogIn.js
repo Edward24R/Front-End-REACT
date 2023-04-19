@@ -5,6 +5,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import '../../App.css';
 
+//Main Login Page
 const LogIn=()=>{
 
     const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
@@ -26,21 +27,28 @@ const LogIn=()=>{
                         color="primary"
                     />
                     }
-                    label="Remember me"
+                    label="Administrator"
                  />
                  {/* Sign In Button */}
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
                 
                 <Typography >
-                     <Link href="#" >
+                     <Link href="/forgot" >
                         Forgot password ?
                 </Link>
                 </Typography>
-                <Typography > Do you have an account ?
+                {/* <Typography > Do you have an account ?
                      <Link href="/signup" >
                         Sign Up 
                 </Link>
+                </Typography> */}
+                <Typography > 
+                     <Link href="/parkwise" >
+                        Log In as Guest 
+                </Link>
                 </Typography>
+
+
             </Paper>
         </Grid>
     )

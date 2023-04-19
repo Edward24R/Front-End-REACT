@@ -3,17 +3,19 @@ import './Footer.css';
 import { ButtonLog } from '../Buttons/LogInB';
 import { Link } from 'react-router-dom';
 
+
+//Footer Component for General use
 function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Parkwise network in order to stay up-to-date with our the parkings spots
+          Keep an eye out for our updated Parkwise locations!
         </p>
         <p className='footer-subscription-text'>
         
         </p>
-        <div className='input-areas'>
+        {/* <div className='input-areas'>
           <form>
             <input
               className='footer-input'
@@ -23,9 +25,9 @@ function Footer() {
             />
             <ButtonLog buttonStyle='btn--outline'>Join</ButtonLog>
           </form>
-        </div>
+        </div> */}
       </section>
-      <div class='footer-links'>
+      {/* <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
@@ -52,24 +54,24 @@ function Footer() {
       
           </div>
           <div class='footer-link-items'>
-            {/* <h2>Social Media</h2>
+            <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>
             <Link to='/'>Facebook</Link>
             <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link> */}
+            <Link to='/'>Twitter</Link>
           </div>
         </div>
-      </div>
+      </div> */}
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
+            <Link to='/home' className='social-logo'>
               PARKWISE
               <i class='fab fa-typo3' />
             </Link>
           </div>
           <small class='website-rights'>PARKWISE © 2020</small>
-          <div class='social-icons'>
+          {/* <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
               to='/'
@@ -110,7 +112,7 @@ function Footer() {
             >
               <i class='fab fa-linkedin' />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

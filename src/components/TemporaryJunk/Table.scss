@@ -1,0 +1,69 @@
+$primary-color: #df27a7;
+$error-color: #e63946;
+$bg-color: #f1faee;
+$text-color: #293241;
+$color-white: #fff;
+$adjust: flex;
+
+$border-radius: 4px;
+
+.container {
+  padding: 3rem;
+  border-radius: $border-radius;
+  display: $adjust;
+
+  h1 {
+    font-size: 2rem;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: $adjust;
+    flex-direction: row;
+    gap: 21px;
+    flex-wrap: wrap;
+  }
+
+  .form-row {
+    display: $adjust;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    color: $color-white;
+    width: 100%;
+    font-size: 1.2rem;
+    background: $primary-color;
+    border-radius: $border-radius;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    width: 150px;
+    height: 50px;
+    display: $adjust;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: rgba($primary-color, 0.8);
+    }
+  }
+
+  .input-error {
+    border-color: $error-color;
+  }
+
+  .error {
+    color: $error-color;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+
+  .disabled-btn {
+    cursor: not-allowed;
+    background: rgba($primary-color, 0.8);
+  }
+}

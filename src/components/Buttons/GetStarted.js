@@ -7,8 +7,9 @@ const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-// const handleClick = () => {'/login-in'};
 
+
+//Get Started Button Component
 export const GetStarted = ({
   children,
   type,
