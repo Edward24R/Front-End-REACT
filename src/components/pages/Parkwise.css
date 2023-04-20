@@ -58,9 +58,9 @@ img.pic {
   }
 
   .backW{
-    /* background-image: url('/public/images/B2.jpg'); */
-    /* margin: 0;
-  padding: 0;
+    background-image: url('/public/images/B2.jpg');
+    margin: 0;
+    padding: 0;
     background-color: aquamarine;
     background-size: cover;
     background-position: center;
@@ -68,5 +68,5 @@ img.pic {
     width: 100vw;
     height: 100vh;
     position: relative;
-    z-index: -1; */
+    z-index: -1;
   }

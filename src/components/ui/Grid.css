@@ -1,10 +1,4 @@
 
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Adjust grid pos */
 .grid{
     position:absolute;

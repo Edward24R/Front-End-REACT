@@ -38,13 +38,13 @@ export default function ListDialog(props) {
 
     if (!values.camN) {
       errors.camN = "camera name is required";
-    } else if (values.username.length < 2) {
+    } else if (values.camN.length < 1) {
       errors.camN = "camera name too short";
     }
 
     if (!values.location) {
       errors.location = "location is required";
-    } else if (values.location.length < 3) {
+    } else if (values.location.length < 1) {
       errors.location = "location too short";
     }
 
@@ -59,19 +59,18 @@ export default function ListDialog(props) {
    
     ipAddr: Yup.string()
     .required("IP is required")
-    .min(4, "username is too short - should be 4 chars minimum"),
+    .min(1, "IP is too short - should be 4 chars minimum"),
 
-    username: Yup.string()
+    camN: Yup.string()
       .required("camera is required")
-      .min(4, "camera name is too short - should be 4 chars minimum"),
+      .min(1, "camera name is too short - should be 4 chars minimum"),
 
     location: Yup.string()
       .required("location is required")
-      .min(0, ""),
-    lastname: Yup.string()
-
+      .min(1, ""),
+    maxCap: Yup.string()
       .required("max capacity is required")
-      .min(0, "")
+      .min(1, "")
   });
 
   const submitForm = (values) => {
@@ -87,7 +86,7 @@ export default function ListDialog(props) {
       onClose={handleClose}
       open={open}
     >
-      <DialogTitle>Add user detail</DialogTitle>
+      <DialogTitle>Add Camera Details</DialogTitle>
       <div
         style={{
           display: "flex",
@@ -99,7 +98,7 @@ export default function ListDialog(props) {
         <div>
           <Formik
             initialValues={updateData}
-            // validate={validate}
+             validate={validate}
             validationSchema={UserDetailSchema}
             onSubmit={submitForm}
           >
@@ -201,8 +200,8 @@ export default function ListDialog(props) {
 
                     <button
                       type="submit"
-                      className={!(dirty && isValid) ? "disabled-btn" : ""}
-                      disabled={!(dirty && isValid)}
+                       className={!(dirty && isValid) ? "disabled-btn" : ""}
+                       disabled={!(dirty && isValid)}
                       variant="outlined"
                     >
                       {props.buttonName}

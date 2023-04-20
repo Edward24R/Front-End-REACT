@@ -3,9 +3,7 @@
 // import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 //import { Zoom } from '@material-ui/core';
 // import './Gmaps.css';
-import Footer from '../ui/Footer';
-import coordMarkerLat from '../ui/Grid';
-import coordMarkerLong from '../ui/Grid';
+
 
 //Google Maps component for Applications
 // Improved with Direction Search bar
@@ -29,19 +27,41 @@ import {
   Autocomplete,
   DirectionsRenderer,
 } from '@react-google-maps/api'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 
-export const myCoord = "18.217597681837834, -67.14288145560002";
-const latC= parseFloat(myCoord.split(',')[0]); 
-const longC = parseFloat(myCoord.split(',')[1]); 
+import { myVariable, getMyVariable, parkingA, parkingB, parkingC, parkingD } from '../ui/functionGrid';
+import { useSelector } from 'react-redux';
+import store from '../ui/store';
+import React, { useEffect, useState } from 'react';
+import MyComponent from '../ui/extra';
 
-function getCoord(){
 
-}
 
-const center = { lat: latC, lng: longC };
 
 function Gmaps() {
+
+  const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    const getLocation = async () => {
+      const position = await new Promise((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+      });
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      setLocation(`${latitude}, ${longitude}`);
+    };
+    getLocation();
+  }, []);
+
+const myCoord =  store.getState().myVariable;
+let latC= parseFloat(myCoord.split(',')[0]); 
+let longC = parseFloat(myCoord.split(',')[1]); 
+const center = { lat: latC, lng: longC };
+const placeholder = location;
+
+
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ['places'],
@@ -61,10 +81,13 @@ function Gmaps() {
     return <SkeletonText />
   }
 
+  
   async function calculateRoute() {
     if (originRef.current.value === '' || destiantionRef.current.value === '') {
       return
     }
+
+
     // eslint-disable-next-line no-undef
     const directionsService = new google.maps.DirectionsService()
 
@@ -88,6 +111,7 @@ function Gmaps() {
   }
 
   return (
+    
     <Flex
       position='relative'
       flexDirection='column'
@@ -95,6 +119,7 @@ function Gmaps() {
       h='100vh'
       w='100vw'
     >
+    
       <Box position='absolute' left={0} top={0} h='100%' w='100%'>
         {/* Google Map Box */}
         <GoogleMap
@@ -109,7 +134,9 @@ function Gmaps() {
           }}
           onLoad={map => setMap(map)}
         >
+        
           <Marker position={center} />
+          
           {directionsResponse && (
             <DirectionsRenderer directions={directionsResponse} />
           )}
@@ -127,7 +154,7 @@ function Gmaps() {
         <HStack spacing={2} justifyContent='space-between'>
           <Box flexGrow={1}>
             <Autocomplete>
-              <Input type='text' placeholder='Origin' ref={originRef} />
+              <Input type='text' placeholder='Origin' ref={originRef} defaultValue={location}/>
             </Autocomplete>
           </Box>
           <Box flexGrow={1}>
@@ -136,6 +163,7 @@ function Gmaps() {
                 type='text'
                 placeholder='Destination'
                 ref={destiantionRef}
+                defaultValue={myCoord}
               />
             </Autocomplete>
           </Box>

@@ -29,7 +29,7 @@ const LogIn=()=>{
                     }
                     label="Administrator"
                  />
-                 {/* Sign In Button */}
+                 {/* Login Button Component */}
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
                 
                 <Typography >
@@ -37,11 +37,11 @@ const LogIn=()=>{
                         Forgot password ?
                 </Link>
                 </Typography>
-                {/* <Typography > Do you have an account ?
+                <Typography > Do you have an account ?
                      <Link href="/signup" >
                         Sign Up 
                 </Link>
-                </Typography> */}
+                </Typography>
                 <Typography > 
                      <Link href="/parkwise" >
                         Log In as Guest 

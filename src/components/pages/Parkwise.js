@@ -13,7 +13,7 @@ import Typography from "@mui/material/Typography";
 export default function Parkwise() {
 
     return (
-     <div className='backW' style={{background: 'green'}}>
+     <div style={{background: 'green'}}>
      {/* <img className='backW' src='/images/B1.jpg'/> */}
           <div className='parkw'><h1>Click on Available Parking for Parking Directions</h1></div>
 

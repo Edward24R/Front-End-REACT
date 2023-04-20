@@ -6,10 +6,10 @@ import { parkingA, parkingB, parkingC, parkingD , coordAvailable} from '.././ui/
 
 //Grid Single Button Component
 
-function Button({ type, text }) {
+function Button({ type, text, clk }) {
 // const coordinates = coordAvailable(text);
 
-  return <button className={type}>
+  return <button className={type} onClick={clk}>
   {text}
   {/* <Link> {coord}</Link> */}
   {/* <Link to= '/home'></Link> */}
