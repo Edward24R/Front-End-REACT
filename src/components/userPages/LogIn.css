@@ -42,3 +42,9 @@
     transition: 250ms;
   }
   
+
+.loginBackground{
+  background-color: #06579e;
+  z-index: -1;
+
+}

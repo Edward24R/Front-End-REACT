@@ -4,7 +4,7 @@ import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 import Header from "./Header";
 
-const Stats = () => {
+const DataTable = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
@@ -79,4 +79,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default DataTable;

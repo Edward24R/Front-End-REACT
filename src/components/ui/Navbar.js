@@ -3,6 +3,7 @@ import { ButtonLog } from '../Buttons/LogInB';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import IMAGES from '../../assets/index';
+import { useAuth0 } from '@auth0/auth0-react';
 
 
 // General Navigation Bar for the Web Application
@@ -21,6 +22,8 @@ function Navbar() {
     }
   };
 
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   useEffect(() => {
     showButton();
   }, []);
@@ -31,7 +34,7 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/home' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/home' className='navbar-logo' onClick={closeMobileMenu} >
             PARKWISE
             <i class='fab fa-typo3' />
             {/* <img src={require(IMAGES.logo) } alt=""/> */}

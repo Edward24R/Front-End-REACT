@@ -10,7 +10,7 @@ const SIZES = ['btn--medium', 'btn--large'];
 
 // const handleClick = () => {'/login-in'};
 
-
+//NEW AUTH0
 //Login Button Component
 export const ButtonLog = ({
   children,
@@ -25,9 +25,10 @@ export const ButtonLog = ({
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
   const { loginWithRedirect, isAuthenticated } = useAuth0();
+
   return (
-    <Link to='/log-in' className='btn-mobile'>
-    
+    // <Link to='/log-in' className='btn-mobile'>
+      !isAuthenticated && (
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={() => loginWithRedirect()} //handleClick can be used instead of onClick
@@ -35,10 +36,10 @@ export const ButtonLog = ({
         
       >
       
-        
       {children}
          
       </button>
-   </Link>  
+ )
+  //  </Link>  
   );
 };

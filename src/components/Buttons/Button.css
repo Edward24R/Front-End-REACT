@@ -14,6 +14,7 @@ button {
     line-height: 1.5;
     border-radius: 0.25rem;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
   button.green {
     background-color: #0acd3b;
@@ -33,6 +34,7 @@ button {
     line-height: 1.5;
     border-radius: 0.25rem;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
   button.red {
     background-color: #be1313;
@@ -52,18 +54,23 @@ button {
     line-height: 1.5;
     border-radius: 0.25rem;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+    z-index: 1;
   }
   button:hover {
     opacity: 0.9;
+    z-index: 1;
   }
   button.pill {
     border-radius: 15px;
+    z-index: 1;
   }
   button.lg {
     padding: 0.5rem 1.2rem;
+    z-index: 1;
   }
   button:active {
     transform: scale(0.98);
     box-shadow: none;
+    z-index: 1;
   }
   

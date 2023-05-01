@@ -12,6 +12,7 @@ export default function About() {
     <> 
 <div className='about-container'>
   <img src='/images/portico_rum.jpg' />
+  <h1 className='blurA'></h1>
   <h1>What is Parkwise?</h1>
   
   <p>Parkwise is a Smart Parking Assist System. It is focused on solving the UPRM’s transit 

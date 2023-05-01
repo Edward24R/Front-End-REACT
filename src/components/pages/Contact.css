@@ -46,6 +46,28 @@ height: 150px;
 width: 300px;
 }
 
-.contact-container > button{
+.picLogoR {
+    position:absolute;
+    top:180px;
+    right: 120px;
+    height:auto;
+    width: 200px;
+    /* border: 1px solid #ddd;
+    border-radius: 4px; */
+    padding: 5px;
+    src: '/images/img-1.jpg';
+    z-index: 1;
+}
 
+.picLogoL {
+  position:absolute;
+  top:510px;
+  right: 1580px;
+  height:auto;
+  width: 200px;
+  /* border: 1px solid #ddd;
+  border-radius: 4px; */
+  padding: 5px;
+  src: '/images/img-1.jpg';
+  z-index: 1;
 }

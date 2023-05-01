@@ -7,11 +7,7 @@ import '../Buttons/Button.css'
 import { changeCoord } from './functionGrid';
 import store from './store';
 
-// const [newArr, setNewArr] = useState(jsonArr);
-
-
-//     Parkwise Grid Component composed of a button grid
-
+/*    Parkwise Grid Component composed of a button grid */
 function Grid() {
 
     const [clicked, setMyClick] = useState(false);
@@ -23,10 +19,10 @@ function Grid() {
     }
 
     return (
-<>
+<div className="page-container">
 
-<div><p className='trans'>Current Available Parking Spots: {totalSpaces()}</p> 
-<p className='trans2'>Parking Area and Location Number </p> </div>
+<div><p className='trans'>Current Available Parking Spots: {totalSpaces()} </p> 
+<p className='trans2'>PARKING LOCATION AND NUMBER OF POSITION </p> </div>
 
 <div className="grid grid-cols-4 grid-row-30" >
 {/* Grid Header */}
@@ -38,6 +34,7 @@ function Grid() {
 {/* Grid Buttons in #D #C #B #A order.
 Buttons on in use are commented out at the moment.
 */}
+
 <div> <Link to={`/${validLink(parkingD,1)}`} onClick={() => handleCoord(parkingD, 1)} >
         <Button type={spotAvailable(parkingD,1)} text= "1" />
          </Link></div>
@@ -313,7 +310,7 @@ Buttons on in use are commented out at the moment.
          </Link></div>
          
 </div>
-</>
+</div>
         );
 }
 export default Grid;
@@ -432,13 +429,3 @@ function totalSpaces(){
       return null; // or any other value you want to return for an invalid position
     }
   }
-
-
-  // function parkingUpdater(arrayN, positionsArr, value) {
-//     for (let pos of positionsArr) {
-//       if (pos >= 0 && pos < arrayN.length) {
-//         arrayN[pos] = value;
-//       }
-//     }
-//     return arrayN;
-//   }

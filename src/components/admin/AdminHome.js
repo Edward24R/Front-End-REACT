@@ -1,7 +1,6 @@
 // import React from 'react';
 import "../../App.css";
 import Footer from "../ui/Footer";
-import UiSection from "../ui/UiSection";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import Sidebar from "../ui/adminRelated/Sidebar";
@@ -10,7 +9,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../ui/adminRelated/Header";
 import { tokens } from "../theme";
 import LineChart from "../ui/adminRelated/LineChart";
-import Stats from "../ui/adminRelated/Stats";
+import Stats from "../ui/adminRelated/DataTable";
 
 
 //Admin Home Page

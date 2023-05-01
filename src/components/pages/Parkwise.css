@@ -20,6 +20,7 @@ img.pic {
     border-radius: 4px;
     padding: 5px;
     src: '/images/img-1.jpg';
+    z-index: 1;
     
 
    }
@@ -61,12 +62,16 @@ img.pic {
     background-image: url('/public/images/B2.jpg');
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color:#0cb9c2;
     background-size: cover;
     background-position: center;
     background-repeat:repeat-y;
     width: 100vw;
-    height: 100vh;
+    height: 2200px;
     position: relative;
     z-index: -1;
+  }
+
+  .page-containerSC {
+    overflow-x: auto;
   }

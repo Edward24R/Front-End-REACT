@@ -1,12 +1,4 @@
-// import React, {Component} from 'react';
-// import '../../App.css';
-// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-//import { Zoom } from '@material-ui/core';
-// import './Gmaps.css';
 
-
-//Google Maps component for Applications
-// Improved with Direction Search bar
 import {
   Box,
   Button,
@@ -29,13 +21,8 @@ import {
 } from '@react-google-maps/api'
 import { useRef } from 'react'
 
-import { myVariable, getMyVariable, parkingA, parkingB, parkingC, parkingD } from '../ui/functionGrid';
-import { useSelector } from 'react-redux';
 import store from '../ui/store';
 import React, { useEffect, useState } from 'react';
-import MyComponent from '../ui/extra';
-
-
 
 
 function Gmaps() {
@@ -198,55 +185,3 @@ const placeholder = location;
 }
 
 export default Gmaps;
-
-
-
-
-
-// // export default function Gmaps() {
-// //   return (
-// //   <h1 className='gmaps'>GMAPS</h1>
-  
-
-  
-// //   );
-// // }
-// const latitude = coordMarkerLat;
-// const longitude = coordMarkerLong;
-
-// export class Gmaps extends Component {
-//   render() {
-//     return (
-//       <>
-//       <Map google={this.props.google} 
-//         style={{width:"100", height:"100"}}
-//           zoom = {17.4}
-//           initialCenter={{
-//             lat: 18.211610324904555, 
-//             lng: -67.14294332244577
-//           }}
-         
-//       >
-
-//         <h1 className='gmaps'>GMAPS</h1>
-//         <Marker onClick={this.onMarkerClick}
-//                 name={'Current location'} />
- 
-//         {/* <InfoWindow onClose={this.onInfoWindowClose}>
-//             <div>
-//               <h1>{this.state.selectedPlace.name}</h1>
-//             </div>
-//         </InfoWindow> */}
-//       </Map>
-
-//       <div><Footer/></div>
-
-//       </>
-      
-//     );
-//   }
-// }
-
-// export default GoogleApiWrapper({
-//   apiKey: ("AIzaSyA0Zxjebh012IAWjIWrQLeqXN73RYA2M_I")
-// })(Gmaps)

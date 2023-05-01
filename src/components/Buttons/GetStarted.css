@@ -14,6 +14,7 @@
   background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
+  z-index: 1;
 }
 
 .btn--outline {
@@ -22,11 +23,13 @@
   padding: 8px 20px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
+  z-index: 1;
 }
 
 .btn--medium {
   padding: 8px 20px;
   font-size: 18px;
+  
 }
 
 .btn--large {

@@ -15,6 +15,7 @@
     color: #ffffff;
     font-size: 100px;
     margin-top: -100px;
+    z-index: 1;
   }
   
   .about-container > p {
@@ -26,6 +27,7 @@
     text-align: justify;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
+    z-index: 1;
   }
   
   .about-btns {
@@ -65,5 +67,17 @@
     .btn {
       width: 100%;
     }
+  }
+
+  .blurA {
+    position:absolute;
+    top: 122;
+    left: 300;
+    width: 90%;
+    height: 60%;
+    backdrop-filter: blur(40px);
+    clip-path: inset(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 120px;
   }
   

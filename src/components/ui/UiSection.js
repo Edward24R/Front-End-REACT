@@ -12,9 +12,12 @@ function UiSection() {
     <div className='hero-container'>
       {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
       {/* <img src='/images/rum-pillars2.jpg' /> */}
-      <img src='/images/colegio-wide.jpg' />
+      <img src='/images/colegio-wide.jpg'/>
+
+        <h1 className='blur'></h1>
       <h1>PARKWISE</h1>
       <p>Find out which campus areas have PARKWISE!</p>
+
       <div className='hero-btns'>
 
         <GetStarted
