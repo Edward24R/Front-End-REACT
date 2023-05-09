@@ -54,11 +54,16 @@ function Gmaps() {
     getLocation();
   }, []);
 
+  
+  // Recieves Coordinates from Store.js
   const myCoord = store.getState().myVariable;
+  //parses the coordinates as they are in the form of a single String value
+    // Example: "18.8398239, 98.289310" parses at first comma "," and divides them for use
   let latC = parseFloat(myCoord.split(",")[0]);
   let longC = parseFloat(myCoord.split(",")[1]);
   const center = { lat: latC, lng: longC };
 
+  //GETS API KEY FROM .env File
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
@@ -85,13 +90,13 @@ function Gmaps() {
       return;
     }
 
-    // eslint-disable-next-line no-undef
+  
     const directionsService = new google.maps.DirectionsService();
 
     const results = await directionsService.route({
       origin: originRef.current.value,
       destination: destiantionRef.current.value,
-      // eslint-disable-next-line no-undef
+      
       travelMode: google.maps.TravelMode.DRIVING,
     });
     setDirectionsResponse(results);
