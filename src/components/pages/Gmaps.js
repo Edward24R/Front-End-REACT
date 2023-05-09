@@ -56,6 +56,7 @@ function Gmaps() {
 
   
   // Recieves Coordinates from Store.js
+  //
   const myCoord = store.getState().myVariable;
   //parses the coordinates as they are in the form of a single String value
     // Example: "18.8398239, 98.289310" parses at first comma "," and divides them for use
