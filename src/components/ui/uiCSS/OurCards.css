@@ -1,0 +1,137 @@
+.ocard {
+    padding: 4rem;
+    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(255, 255, 255) 100%);;
+  }
+  
+  
+.ocard__container {
+    display: flex;
+    flex-flow:row-reverse;
+    align-items: center;
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
+}
+  
+.ocard__wrapper {
+    position:static;
+    margin: 50px 0 45px;
+}
+  
+.ocard__items {
+    margin-bottom: 24px;
+}
+  
+.ocard__item {
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 10px;
+}
+  
+.ocard__item__link {
+    display:flex;
+    flex-flow:wrap; /* Card Pos */
+    width: 100%;
+    background-color: #e2e2e2; /* Card Background */
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.ocard__item > h1{
+  text-align: center;
+}
+  
+.ocard__item__pic-wrap {
+    position:absolute;      /* Picture Style */
+    width: 100%;
+    padding-top: 67%;
+    overflow: hidden;
+}
+  
+.fade-img {
+    animation-name: fade-img;
+    animation-duration: 2s;
+}
+  
+.ocard__item__pic-wrap::after {
+    content:none;
+    position: absolute;
+    bottom: 0;
+    margin-left: 10px;
+    padding: 6px 8px;
+    max-width: calc((100%) - 60px);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #1f98f4;
+    box-sizing: border-box;
+}
+  
+.ocard__item__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    /* max-width: 100%; */
+    height: 100%;
+    /* max-height: 100%; */
+    object-fit: cover;
+    transition: all 0.2s linear;
+}
+  
+.ocard__item__img:hover {
+    transform: scale(1.1);
+}
+  
+  /* Adjust Card Sizes */
+.ocard__item__info {
+    padding: 60px 70px 30px;
+}
+  
+.ocard__item__text {
+    color: #0ed132;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.ocardTxt{
+    font-family: Arial, sans-serif;
+    font-size: 50px; 
+    color: #fff;
+}  
+
+
+  
+@media only screen and (min-width: 1024px) {
+    .ocard__items {
+      display: flex;
+    }
+}
+  
+@media only screen and (max-width: 1024px) {
+  
+    /* .ocard__items {
+      margin-bottom: 2rem;
+    }
+
+    .ocard__container {
+        display:-moz-grid;
+        flex-flow:column;
+        align-items: center;
+        max-width: 30px;
+        width: 30%;
+        margin: 0 auto;
+    } */
+
+}
+
+
+  

@@ -1,0 +1,25 @@
+{ 
+    "cameras": [
+    {
+      "id": 1,
+      "name": "Admi Parking A",
+      "location": "Entrance",
+      "capacity": "63",
+      "ipAddr": "172:233:02"
+    },
+    {
+      "id": 2,
+      "name": "Admi Parking B",
+      "location": "West of Building",
+      "capacity": "63",
+      "ipAddr": "172:233:02"
+    },
+    {
+      "id": 3,
+      "name": "Admi Parking C",
+      "location": "South of Building",
+      "capacity": "63",
+      "ipAddr": "172:233:02"
+    }
+]
+}

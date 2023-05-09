@@ -1,11 +1,12 @@
-import React from 'react';
-import '../../App.css';
-import './About.css';
+
+import './pagesCSS/About.css';
 import OurCards from '../ui/OurCards';
 import Footer from '../ui/Footer';
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+
+import React from 'react';
 
 //Info Page about Parkwise and its Members
+
 export default function About() {
 
   return (
@@ -20,6 +21,7 @@ export default function About() {
       vacancy within the campus parking areas. All of this while also having the functionality of alerting users of 
       spot availability via the Parkwise web and mobile application. </p> 
   
+
 </div>
 
 

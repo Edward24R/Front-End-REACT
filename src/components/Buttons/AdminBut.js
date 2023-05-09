@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './LoginB.css';
+import './ButtonsCSS/LoginB.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];

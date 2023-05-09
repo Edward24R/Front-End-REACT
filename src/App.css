@@ -21,32 +21,6 @@
     font-size: 3rem;
   }
   
-  .services {
-    background-image: url('/public/images/img-2.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
-  
-  .products {
-    background-image: url('/public/images/img-1.jpg');
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
-  
-  .sign-up {
-    background-image: url('/public/images/img-8.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  }
 
 h1 {
     text-align: center;
@@ -94,3 +68,49 @@ form{
 p {
 
 }
+
+.blurH {
+  position:absolute;
+  top:300;
+  left: 200;
+  width: 45%;
+  height: 40%;
+  backdrop-filter: blur(40px);
+  clip-path: inset(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 120px;
+  z-index: -1;
+}
+
+/* body {
+  overflow-x: scroll;
+} */
+
+/* body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+} */
+
+/* hide the scrollbar by default */
+/* .scrollable-content {
+  overflow: hidden;
+}
+
+/* show the scrollbar when content overflows */
+/* .scrollable-content::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #888;
+} */ 

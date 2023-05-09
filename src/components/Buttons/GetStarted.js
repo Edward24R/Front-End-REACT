@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './GetStarted.css';
+import './ButtonsCSS/GetStarted.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];

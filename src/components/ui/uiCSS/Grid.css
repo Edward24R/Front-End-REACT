@@ -1,0 +1,271 @@
+
+.page-container {
+    overflow-x: auto;
+  }
+
+/* Adjust grid pos */
+.grid{
+    position:absolute;
+    top: 600px;
+    right: 570px;
+    height: 168vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: none;
+    height:auto;/* added*/
+    width: 550px;
+    z-index: 1;
+    overflow-x: auto;
+}
+
+.gridPosA{
+    position:absolute;
+    top: 40%;
+    right: 20%;
+    height: 138vh;
+    z-index: 1;
+    overflow-x: auto;
+    object-fit:fill;
+    
+}
+
+.gridPosB{
+    position:absolute;
+    top: 77%;
+    right: 35%;
+    height: 198vh;
+    z-index: 1;
+    overflow-x:visible;
+    overflow-x: fill;
+}
+
+.gridPosC{
+    position:absolute;
+    top: 77%;
+    right: 45%;
+    height: 166vh;
+    z-index: 1;
+    overflow-x: fill;
+}
+
+.gridPosD{
+    position:absolute;
+    top: 77%;
+    right: 59%;
+    height: 146vh;
+    z-index: 1;
+    overflow-x: fill;
+}
+
+.grid__body{
+    background-color: rgb(0, 0, 0);
+    border: 35px solid blue;
+    overflow-x: auto;
+    z-index: 1;
+}
+
+.grid > div{
+    color: aliceblue;
+    border: 3px solid #020000;
+    text-align: center;
+    font-size: 1.4em;
+    padding: 0.5em 2em;
+    z-index: 1;
+    
+}
+
+.letterStyle{
+    display: flex; 
+    position: center; 
+    color: blue; 
+    font-size: 60px ;
+}
+
+.gridBack{
+    width: 100%;
+    height: 62%;
+}
+
+.gridBack2{
+    width: 100%;
+    height: 75%;
+}
+
+.trans {
+    position:absolute;
+    top: 130px;
+    right: 1350px;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    /* background-color: white; */
+    
+}
+
+.trans2 {
+    position:absolute;
+    top: 30%;
+    left: 70%;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    /* background-color: white; */
+    z-index: 1;
+    
+}
+
+
+@media only screen and (max-width: 1900px) {
+   
+    .gridBack{
+        width: 90%;
+        height: 65%;
+    }
+
+    .gridBack2{
+        width: 100%;
+        height: 75%;
+    }
+    .trans2 {
+        font-size: 1.5rem;
+        top:35%;
+        left: 56%;
+      }
+  }
+
+@media only screen and (max-width: 1050px) {
+    .letterStyle{
+        font-size: 40px ;
+    }
+    
+    .gridBack{
+        width: 60%;
+        height: 57%;
+    }
+
+    .gridBack2{
+        width: 60%;
+        height: 65%;
+    }
+  }
+
+  @media only screen and (max-width: 680px) {
+    .letterStyle{
+        font-size: 20px ;
+    }
+    
+    .gridBack{
+        width: 40%;
+        height: 45%;
+    }
+
+    .gridBack2{
+        width: 40%;
+        height: 58%;
+    }
+  }
+
+@media only screen and (max-width: 1900px) {
+    .gridPosA{
+        top: 56%;
+        right: 21%;
+        height: 138vh;
+    }
+    .gridPosB{
+        top: 111%;
+        right: 34%;
+        height: 18vh;
+    }
+    .gridPosC{
+        top: 111%;
+        right: 45%;
+        height: 166vh;
+    }
+    .gridPosD{
+        top: 111%;
+        right: 59%;
+        height: 157vh;
+    }
+  }
+
+/* @media only screen and (max-width: 600px) {
+    .letterStyle{
+        display: flex; 
+        font-size: 60px ;
+    }
+    
+    .gridBack{
+        width: 100%;
+        height: 20%;
+    }
+  } */
+
+@media only screen and (max-width: 1050px) {
+    .parkw {
+        font-size: 1.5rem;
+      }
+      .trans {
+        font-size: 1.5rem;
+      }
+      .trans2 {
+          font-size: 1.5rem;
+          left: 30%;
+        }
+  }
+
+@media only screen and (max-width: 600px) {
+    .parkw {
+      font-size: 1.5rem;
+    }
+    .trans {
+      font-size: 1rem;
+    }
+    .trans2 {
+        font-size: 1rem;
+        left: 30%;
+      }
+  }
+
+@media only screen and (min-width: 1200px) {
+    .grid {
+      width: 24%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .grid {
+      
+      display: flex;
+    }
+  }
+  
+  @media only screen and (min-width: 1768px) {
+    .grid {
+      
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .grid {
+      margin-bottom: 2rem;
+    }
+  }
+
+
+
+.gBody {
+  overflow-x: scroll;
+}
+
+  /* hide the scrollbar by default */
+  .scrollable-content {
+    overflow: hidden;
+  }
+  
+  /* show the scrollbar when content overflows */
+  .scrollable-content::-webkit-scrollbar {
+    width: 10px;
+  }
+  .scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background: #888;
+  }

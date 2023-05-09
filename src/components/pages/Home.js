@@ -8,10 +8,13 @@ import Footer from '../ui/Footer';
 function Home() {
   return (
     <>
-    <div>
+    <div >
+    <h1 className='blur'></h1> 
+
       <UiSection />
-      <Cards />
-      <Footer />
+      
+      {/* <Cards /> */}
+      {/* <Footer /> */}
     </div>
     
     </>

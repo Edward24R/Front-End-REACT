@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './SignUpButton.css';
+import './ButtonsCSS/SignUpButton.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];

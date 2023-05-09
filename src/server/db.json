@@ -1,0 +1,223 @@
+{   
+     "users": [
+       {
+        "id": "1",
+        "email": "tom@gmail.com",
+        "password": "Tom1234",
+        "isAdmin": false
+       },
+       {
+        "id": "2",
+        "email": "may@gmail.com",
+        "password": "May1234",
+        "isAdmin": true
+       },
+       {
+        "id": "3",
+        "email": "albert@gmail.com",
+        "password": "albert1234",
+        "isAdmin": false
+       }
+      ],
+
+     "parkings": [  {
+
+        "parkingA": [
+            {
+              "position": 1,
+              "latitude": 37.7749,
+              "longitude": -122.4194,
+              "isOccupied": true,
+              "parkA": [1,0,1,0],
+              "parkACoord": [
+                "18.217597681837834, -67.14288145560002", 
+                "18.21757284111633,-67.14287340897359",
+                "18.217555006749976,-67.14286133903393",
+                "18.217534624614764, -67.14284926909426"
+                ]
+          
+            },
+            {
+              "position": 2,
+              "latitude": 40.7128,
+              "longitude": -74.0060,
+              "isOccupied": false
+            },
+            {
+              "position": 3,
+              "latitude": 51.5074,
+              "longitude": -0.1278,
+              "isOccupied": true
+            },
+            {
+              "position": 4,
+              "latitude": 48.8566,
+              "longitude": 2.3522,
+              "isOccupied": false
+            }
+          ],
+      
+          "parkingB": [
+            {
+              "position": 1,
+              "latitude": 37.7749,
+              "longitude": -122.4194,
+              "isOccupied": true
+            },
+            {
+              "position": 2,
+              "latitude": 40.7128,
+              "longitude": -74.0060,
+              "isOccupied": false
+            },
+            {
+              "position": 3,
+              "latitude": 51.5074,
+              "longitude": -0.1278,
+              "isOccupied": true
+            },
+            {
+              "position": 4,
+              "latitude": 48.8566,
+              "longitude": 2.3522,
+              "isOccupied": false
+            }
+          ],
+      
+          "parkingC": [
+            {
+              "position": 1,
+              "latitude": 37.7749,
+              "longitude": -122.4194,
+              "isOccupied": true
+            },
+            {
+              "position": 2,
+              "latitude": 40.7128,
+              "longitude": -74.0060,
+              "isOccupied": false
+            },
+            {
+              "position": 3,
+              "latitude": 51.5074,
+              "longitude": -0.1278,
+              "isOccupied": true
+            },
+            {
+              "position": 4,
+              "latitude": 48.8566,
+              "longitude": 2.3522,
+              "isOccupied": false
+            }
+          ],
+          "parkingD": [
+            {
+              "position": 1,
+              "latitude": 37.7749,
+              "longitude": -122.4194,
+              "isOccupied": true
+            },
+            {
+              "position": 2,
+              "latitude": 40.7128,
+              "longitude": -74.0060,
+              "isOccupied": false
+            },
+            {
+              "position": 3,
+              "latitude": 51.5074,
+              "longitude": -0.1278,
+              "isOccupied": true
+            },
+            {
+              "position": 4,
+              "latitude": 48.8566,
+              "longitude": 2.3522,
+              "isOccupied": false
+            }
+          ]
+      
+        }
+    ],
+
+    "cameras": [
+        {
+          "id": 1,
+          "name": "Admi Parking A",
+          "location": "Entrance",
+          "capacity": "63",
+          "ipAddr": "172:233:02"
+        },
+        {
+          "id": 2,
+          "name": "Admi Parking B",
+          "location": "West of Building",
+          "capacity": "63",
+          "ipAddr": "172:233:02"
+        },
+        {
+          "id": 3,
+          "name": "Admi Parking C",
+          "location": "South of Building",
+          "capacity": "63",
+          "ipAddr": "172:233:02"
+        }
+    ],
+
+    "statistics": [
+        {
+          "AvgParkingCapacityPerHour": "63",
+          "name": " ",
+          "location": "",
+          "capacity": "63",
+          "ipAddr": "17"
+        }
+    ],
+
+
+    "parks": [
+      {
+
+        "parkA": [1,0,1,0],
+        "parkACoord": [
+                "18.217597681837834, -67.14288145560002", 
+                "18.21757284111633,-67.14287340897359",
+                "18.217555006749976,-67.14286133903393",
+                "18.217534624614764, -67.14284926909426"
+                ],
+        "parkingB": [0,1,0,1],
+        "parkBCoord": [
+          " 18.217527694857605, -67.14297094830032",
+          "18.217506675777337, -67.14296223112166",
+          "18.217486930578414, -67.14295686670404",
+          "18.217465274551206, -67.14295083173421"   
+          ],
+        "parkingC" : [1,0,1,0],
+        "parkCCoord": [
+          " 18.217503327362838, -67.1430278171088",
+          "18.217478486627872, -67.14301909993016",
+          "18.217461289193878, -67.14300568888608",
+          "18.2174409070477, -67.14300032446846 "   
+          ],
+        "parkingD": [0,1,0,1],
+        "parkDCoord": [
+          "18.217454442274484, -67.14313830349626",
+          "18.217432149301096, -67.14312958631761",
+          "18.21741367797814, -67.14312019858677",
+          "18.217390111114952, -67.14311215196032"
+          ]
+      }
+  ],
+
+    "ipAddress": [
+      {
+        "id": "1",
+        "myIP": "192.321.231.32"
+      }
+
+    ]
+    
+
+
+
+   }

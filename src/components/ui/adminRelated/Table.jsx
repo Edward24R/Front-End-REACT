@@ -7,7 +7,7 @@ import Paper from "@mui/material/Paper";
 import SortIcon from "@mui/icons-material/ArrowDownward";
 import "./Table.css";
 import ListDialog from "./listDialog";
-import "../../data/cameraData.json";
+import "../.././../temp/cameraData.json";
 
 const jsonArr = [
   {
@@ -20,7 +20,7 @@ const jsonArr = [
 ];
 
 async function getChartData() {
-  const response = await fetch("../data/cameraData.json");
+  const response = await fetch("../.././../temp/cameraData.json");
   const { cameraJson } = await response.json();
   return cameraJson;
 }

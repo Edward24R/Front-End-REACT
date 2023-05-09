@@ -1,6 +1,6 @@
 import React from 'react';
-import './OurCards.css';
-import OurCardItem from './OurCardItem';
+import './uiCSS/OurCards.css';
+import OurCardItem from './helpers/OurCardItem';
 
 
 // Development Team member cards component for About Page

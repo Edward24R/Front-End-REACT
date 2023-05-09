@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ButtonLog } from '../Buttons/LogInB';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './uiCSS/Navbar.css';
 import IMAGES from '../../assets/index';
 import { useAuth0 } from '@auth0/auth0-react';
 
@@ -49,7 +49,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 to='/gmaps'
                 className='nav-links'
@@ -57,7 +57,7 @@ function Navbar() {
               >
                 P-Maps
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link
                 to='/about'

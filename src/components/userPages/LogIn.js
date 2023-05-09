@@ -1,57 +1,119 @@
-import React, { useState, useEffect }from 'react';
-import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@material-ui/core'
-// import LockOutlinedIcon from '@material-ui/icons/lock-outlined-icon';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import '../../App.css';
+// import "../../App.css";
+import {Form, Formik } from "formik";
+import * as Yup from "yup";
+import { Button, ButtonGroup, Heading, VStack } from "@chakra-ui/react";
+import { useNavigate } from "react-router";
+import './userPagesCSS/LogIn.css'
 
-//Main Login Page
-const LogIn=()=>{
+// Creating schema
+const schema = Yup.object().shape({
+  email: Yup.string()
+    .required("Email is a required field")
+    .email("Invalid email format"),
+  password: Yup.string()
+    .required("Password is a required field")
+    .min(8, "Password must be at least 8 characters"),
+});
 
-    const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
-    const avatarStyle={backgroundColor:'#1bbd7e'}
-    const btnstyle={margin:'8px 0'}
-    return(
-        <Grid>
-            <Paper elevation={10} style={paperStyle}>
-                <Grid align='center'>
-                     <Avatar style={avatarStyle}></Avatar>
-                    <h2>Log in</h2>
-                </Grid>
-                <TextField label='Username' placeholder='Enter username' fullWidth required/>
-                <TextField label='Password' placeholder='Enter password' type='password' fullWidth required/>
-                <FormControlLabel
-                    control={
-                    <Checkbox
-                        name="checkedB"
-                        color="primary"
-                    />
-                    }
-                    label="Administrator"
-                 />
-                 {/* Login Button Component */}
-                <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
-                
-                <Typography >
-                     <Link href="/forgot" >
-                        Forgot password ?
-                </Link>
-                </Typography>
-                <Typography > Do you have an account ?
-                     <Link href="/signup" >
-                        Sign Up 
-                </Link>
-                </Typography>
-                <Typography > 
-                     <Link href="/parkwise" >
-                        Log In as Guest 
-                </Link>
-                </Typography>
+const initialValuesRegister = {
+    email: "",
+    isAdmin: false,
+    password: "",
+    confirmPassword: ""
+  };
+  
+  const type = [
+    {
+      value: "User",
+      label: "Student"
+    }
+  ];
 
 
-            </Paper>
-        </Grid>
-    )
+function Login() {
+    const navigate = useNavigate();
+    // const paperStyle={ position: 'absolute' ,top: 140,padding :20,height:'40vh',width:680, margin:"20px auto", backgroundColor: '#668966'}
+  
+
+  return (
+    <>
+      {/* Wrapping form inside formik tag and passing our schema to validationSchema prop */}
+      <Formik
+        validationSchema={schema}
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values) => {
+          // Alert the input values of the form that we filled
+          alert(JSON.stringify(values));
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+        }) => (
+    <VStack
+        as={Form}
+        w={{ base: "90%", md: "500px" }}
+        m="auto"
+        justify="center"
+        h="100vh"
+        spacing="1rem"
+        border="1px solid black" p="4" bg="#668966" borderRadius="100px" overflow="hidden"
+        minH="50vh" maxH="91.5vh"
+      >
+          <div className="login">
+            <div className="form">
+           {/* Passing handleSubmit parameter tohtml form onSubmit property */}
+              <form noValidate onSubmit={handleSubmit}>
+                <span>Login</span>
+              {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  placeholder="Enter email"
+                  className="form-control inp_text"
+                  id="email"
+                />
+                {/* If validation is not passed show errors */}
+                <p className="error">
+                  {errors.email && touched.email && errors.email}
+                </p>
+                 {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+                <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                  placeholder="Enter password"
+                  className="form-control"
+                />
+                 {/* If validation is not passed show errors */}
+                <p className="error">
+                  {errors.password && touched.password && errors.password}
+                </p>
+                {/* Click on submit button to submit the form */}
+                    <ButtonGroup pt="1rem">
+                    <button  colorScheme="teal" type="submit">
+                         Log In
+                    </button>
+                    <button   colorScheme="green" onClick={() => navigate("/signup")}>Create Account</button>
+                    </ButtonGroup>
+
+              </form>
+            </div>
+          </div>
+          </VStack>
+        )}
+      </Formik>
+    </>
+  );
 }
 
-export default LogIn
+export default Login;

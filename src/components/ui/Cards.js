@@ -1,12 +1,12 @@
 import React from 'react';
-import './Cards.css';
-import CardItem from './CardItem';
+import './uiCSS/Cards.css';
+import CardItem from './helpers/CardItem';
 
 //Card Component for Home Page Locations
 function Cards() {
   return (
     <div className='cards'>
-      <h1 className='cardsTxt'>Check Out Our Locations!</h1>
+      {/* <h1 className='cardsTxt'>Check Out Our Locations!</h1> */}
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>

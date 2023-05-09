@@ -1,6 +1,6 @@
 
 import React from 'react';
-import './LoginB.css';
+import './ButtonsCSS/LoginB.css';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
