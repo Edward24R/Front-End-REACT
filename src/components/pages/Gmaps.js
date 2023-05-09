@@ -63,7 +63,7 @@ function Gmaps() {
   let longC = parseFloat(myCoord.split(",")[1]);
   const center = { lat: latC, lng: longC };
 
-  //GETS API KEY FROM .env File
+  //GETS API KEY FROM .env
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
@@ -90,13 +90,13 @@ function Gmaps() {
       return;
     }
 
-  
+    // eslint-disable-next-line no-undef
     const directionsService = new google.maps.DirectionsService();
 
     const results = await directionsService.route({
       origin: originRef.current.value,
       destination: destiantionRef.current.value,
-      
+      // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.DRIVING,
     });
     setDirectionsResponse(results);
