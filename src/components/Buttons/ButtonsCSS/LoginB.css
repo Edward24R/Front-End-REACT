@@ -1,5 +1,5 @@
 :root {
-  --primary: #fff;
+  --primary: #5e5e5e;
 }
 
 .lbtn {
@@ -12,7 +12,7 @@
 
 .lbtn--primary {
   background-color: var(--primary);
-  color: #242424;
+  color: #27bd3b;
   border: 1px solid var(--primary);
 }
 

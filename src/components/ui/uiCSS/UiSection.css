@@ -32,6 +32,11 @@
     z-index: 1;
 }
 
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+
 /* .hero-btns {
   margin-top: 32px;
   z-index: 1;
@@ -148,10 +153,10 @@
 
 .blur {
   position:absolute;
-  top: 0;
+  top: 75vh;
   left: 300;
   width: 45%;
-  height: 40%;
+  height: 30%;
   backdrop-filter: blur(40px);
   clip-path: inset(20px);
   border: 2px solid rgba(255, 255, 255, 0.1);

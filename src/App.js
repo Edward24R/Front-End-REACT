@@ -1,31 +1,47 @@
-import React from 'react';
+/*
+
+
+
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
+
+import React, { Component, useEffect, useState } from 'react';
+import axios from 'axios';
+
 import Navbar from './components/ui/Navbar';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {useNavigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Switch} from 'react-router-dom';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 
-// import LogIn from './components/userPages/LogIn';
-// import SignUp from './components/userPages/SignUp';
-import Login from './components/userPages/LogIn';
-import SignUp from './components/userPages/SignUp';
+import Login from './components/userPages/LogIn2';
+import SignUp from './components/userPages/SignUp2';
 
 import Home from './components/pages/Home';
 import Gmaps from './components/pages/Gmaps';
 import Parkwise from './components/pages/Parkwise';
 import AdminHome from './components/pages/AdminHome';
-import ForgotPass from './components/userPages/ForgotPass';
 import { ChakraProvider, theme } from '@chakra-ui/react'
-import { ColorModeScript } from "@chakra-ui/color-mode";
-import themeS from './components/userPages/themeS';
-import api from './api/db';
-import { useState, useEffect } from 'react';
-import { format } from 'date-fns';
-
+import Profile from './components/pages/Profile';
 
 function App() {
  
+  const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get('http://18.219.33.99:9190/authenticate/signup');
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
   return (
     <>
     
@@ -36,6 +52,7 @@ function App() {
           <Route path='/home' exact element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />
+          <Route path='/profile' element={<Profile/>} />
           <Route path='/log-in' element={ 
             <ChakraProvider theme={theme}>
               <Login/>
@@ -46,10 +63,6 @@ function App() {
                 <SignUp/>
               </ChakraProvider>
           } />
-         
-          {/* <Route path='/log-in' element={<LogIn/>} />
-          <Route path='/signup' element={<SignUp/>} /> */}
-          <Route path='/forgot' element={<ForgotPass/>} />
           
           <Route path='/gmaps' element={
             <ChakraProvider theme={theme}>

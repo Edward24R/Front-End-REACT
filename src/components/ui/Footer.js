@@ -1,3 +1,10 @@
+/*
+
+
+
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 import React from 'react';
 import './uiCSS/Footer.css';
 import { ButtonLog } from '../Buttons/LogInB';
@@ -27,41 +34,7 @@ function Footer() {
           </form>
         </div> */}
       </section>
-      {/* <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/log-in'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
-          </div>
-          <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Videos</h2>
-            
-            <Link to='/'>Tutorials</Link>
-            <Link to='/'>How We Do It</Link>
-      
-          </div>
-          <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
-        </div>
-      </div> */}
+   
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
@@ -71,10 +44,10 @@ function Footer() {
             </Link>
           </div>
           <small class='website-rights'>PARKWISE © 2020</small>
-          {/* <div class='social-icons'>
+          <div class='social-icons'>
+          <p style={{ color: 'white' }}>Coming Soon</p>
             <Link
               class='social-icon-link facebook'
-              to='/'
               target='_blank'
               aria-label='Facebook'
             >
@@ -82,7 +55,6 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
               target='_blank'
               aria-label='Instagram'
             >
@@ -90,7 +62,6 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
               target='_blank'
               aria-label='Youtube'
             >
@@ -98,7 +69,6 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
               target='_blank'
               aria-label='Twitter'
             >
@@ -106,13 +76,12 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
               target='_blank'
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
             </Link>
-          </div> */}
+          </div>
         </div>
       </section>
     </div>

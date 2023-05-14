@@ -1,6 +1,60 @@
+/*
+Grid helper functions for receiving and sending data between database and application files.
+
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
+
 import store from "../../../store/store";
 
 let myVariable = "18.217454442274484, -67.14313830349626";
+
+let coordLat = "18.217454442274484";
+let coordLong = "-67.14313830349626";
+
+
+
+
+
+
+
+//New Function for Backend Search
+export function sendCoord(pid) {
+  
+  if( pid === undefined){
+
+    //get the pid lat
+    //set coordLat = pid.coord.latitude
+    store.dispatch({
+      type: "UPDATE_MESSAGE",
+      payload: coordLat,
+    });
+    //get the pid long
+    //set coordLong = pid.coord.longitude
+    store.dispatch({
+      type: "UPDATE_MESSAGE",
+      payload: coordLong,
+    });
+
+  } else
+
+  return coordLat, coordLong;
+}
+
+//New Function for Backend
+export function isLinkAvailable(pid) {
+  //if(pid.isOccupied == true){
+    // return 'parkwise';}
+  //else return 'gmaps';
+}
+
+//New Function for Backend
+export function isColorAvailable(pid) {
+  //if(pid.isOccupied == true){
+    // return 'red';}
+  //else return 'green';
+}
+
 
 export function changeCoord(arr, pos) {
   if (isArrayIdentical(arr, parkingA)) {
@@ -33,6 +87,7 @@ export function changeCoord(arr, pos) {
   }); // Update myVariable
   return myVariable;
 }
+
 
 export function getMyVariable() {
   return myVariable;

@@ -1,3 +1,13 @@
+/*
+Grid component:
+Organizational component where various individual Grid are positioned and configured with reference to the 
+specified parking lot. Within the component are the GridItems which separate the individual buttons of the
+component. The Grid functions by  
+
+
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 import React from "react";
 import "./uiCSS/Grid.css";
 import { Link } from "react-router-dom";
@@ -6,6 +16,7 @@ import { useState } from "react";
 import "../Buttons/ButtonsCSS/GridButton.css";
 import { changeCoord } from "./helpers/functionGrid";
 import store from "../../store/store";
+import { sendCoord, isLinkAvailable, isColorAvailable } from "./helpers/functionGrid";
 
 import { Grid, GridItem } from "@chakra-ui/react";
 
@@ -20,7 +31,9 @@ function MyGrid({ parkings }) {
   const [clicked, setMyClick] = useState(false);
   const [coord, setMyCoord] = useState(false);
 
+  //Changes Coords in store file 
   const handleCoord = (arr, pos) => {
+    //helper function from store file
     changeCoord(arr, pos);
     return true;
   };
@@ -302,10 +315,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="5" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="5" />
               </Link>
             </div>
           </GridItem>
@@ -313,10 +326,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="6" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="6" />
               </Link>
             </div>
           </GridItem>
@@ -324,44 +337,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="7" />
-              </Link>
-            </div>
-          </GridItem>
-
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="8" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="9" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="10" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="7" />
               </Link>
             </div>
           </GridItem>
@@ -370,10 +349,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="11" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="8" />
               </Link>
             </div>
           </GridItem>
@@ -381,10 +360,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="12" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="9" />
               </Link>
             </div>
           </GridItem>
@@ -392,44 +371,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="13" />
-              </Link>
-            </div>
-          </GridItem>
-
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="14" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="15" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
-              >
-                <GridButton type={spotAvailable(parkingB, 1)} text="16" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="10" />
               </Link>
             </div>
           </GridItem>
@@ -438,10 +383,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="17" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="11" />
               </Link>
             </div>
           </GridItem>
@@ -449,10 +394,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="18" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="12" />
               </Link>
             </div>
           </GridItem>
@@ -460,10 +405,78 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingB, 1)}`}
-                onClick={() => handleCoord(parkingB, 1)}
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
               >
-                <GridButton type={spotAvailable(parkingB, 1)} text="19" />
+                <GridButton type={spotAvailable(parkingB, 2)} text="13" />
+              </Link>
+            </div>
+          </GridItem>
+
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="14" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="15" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="16" />
+              </Link>
+            </div>
+          </GridItem>
+
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="17" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="18" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingB, 2)}`}
+                onClick={() => handleCoord(parkingB, 2)}
+              >
+                <GridButton type={spotAvailable(parkingB, 2)} text="19" />
               </Link>
             </div>
           </GridItem>
@@ -827,10 +840,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="5" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="5" />
               </Link>
             </div>
           </GridItem>
@@ -838,10 +851,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="6" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="6" />
               </Link>
             </div>
           </GridItem>
@@ -849,44 +862,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="7" />
-              </Link>
-            </div>
-          </GridItem>
-
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="8" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="9" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="10" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="7" />
               </Link>
             </div>
           </GridItem>
@@ -895,10 +874,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="11" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="8" />
               </Link>
             </div>
           </GridItem>
@@ -907,9 +886,9 @@ function MyGrid({ parkings }) {
               {" "}
               <Link
                 to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="12" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="9" />
               </Link>
             </div>
           </GridItem>
@@ -917,44 +896,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="13" />
-              </Link>
-            </div>
-          </GridItem>
-
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="14" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="15" />
-              </Link>
-            </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              {" "}
-              <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
-              >
-                <GridButton type={spotAvailable(parkingD, 1)} text="16" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="10" />
               </Link>
             </div>
           </GridItem>
@@ -963,10 +908,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="17" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="11" />
               </Link>
             </div>
           </GridItem>
@@ -974,10 +919,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="18" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="12" />
               </Link>
             </div>
           </GridItem>
@@ -985,10 +930,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="19" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="13" />
               </Link>
             </div>
           </GridItem>
@@ -997,10 +942,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="20" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="14" />
               </Link>
             </div>
           </GridItem>
@@ -1008,10 +953,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 1)}`}
-                onClick={() => handleCoord(parkingD, 1)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 1)} text="21" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="15" />
               </Link>
             </div>
           </GridItem>
@@ -1019,10 +964,78 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingD, 22)}`}
-                onClick={() => handleCoord(parkingD, 22)}
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
               >
-                <GridButton type={spotAvailable(parkingD, 22)} text="22" />
+                <GridButton type={spotAvailable(parkingD, 2)} text="16" />
+              </Link>
+            </div>
+          </GridItem>
+
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="17" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="18" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="19" />
+              </Link>
+            </div>
+          </GridItem>
+
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="20" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="21" />
+              </Link>
+            </div>
+          </GridItem>
+          <GridItem {...baseStyle}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {" "}
+              <Link
+                to={`/${validLink(parkingD, 2)}`}
+                onClick={() => handleCoord(parkingD, 2)}
+              >
+                <GridButton type={spotAvailable(parkingD, 2)} text="22" />
               </Link>
             </div>
           </GridItem>

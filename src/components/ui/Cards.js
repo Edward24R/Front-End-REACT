@@ -1,3 +1,11 @@
+/*
+Cards:
+Component that displays card images of the available Parkwise locations and provides the link functionality to 
+their desired parking location. Uses CSS for styling and positioning. The Images are stored in the the public
+folder file which are called to as a src attribute.
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 import React from 'react';
 import './uiCSS/Cards.css';
 import CardItem from './helpers/CardItem';
@@ -26,7 +34,7 @@ function Cards() {
               src='images/img-5.jpg'
               text='UPRM: Biology Parking Lot'
               label='Coming Soon'
-              path='/adminhome'
+              path='/home'
             />
           </ul>
           <ul className='cards__items'>

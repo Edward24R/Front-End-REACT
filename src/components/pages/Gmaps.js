@@ -1,3 +1,12 @@
+/*
+Gmaps:
+Google Maps API user page, used for user Navigation after using the Parkwise interface for a
+chosen parking location. It is primarily composed of the GoogleMap component which generates the the 
+Google Map and the coordinate display box which contains the functional button for navigation 
+calculation. 
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 import {
   Box,
   Button,
@@ -42,6 +51,9 @@ function Gmaps() {
   //   };
   // }, []);
 
+  /*Get user current Location coordinates using the user's current location. If user has not given permissions prior
+  then a pop up event will be triggered, asking the user permission for location tracking. 
+  */
   useEffect(() => {
     const getLocation = async () => {
       const position = await new Promise((resolve, reject) => {
@@ -55,16 +67,18 @@ function Gmaps() {
   }, []);
 
   
-  // Recieves Coordinates from Store.js
-  //
+  /* 
+  Receives Coordinates from Store.js
+  */
   const myCoord = store.getState().myVariable;
+
   //parses the coordinates as they are in the form of a single String value
-    // Example: "18.8398239, 98.289310" parses at first comma "," and divides them for use
+  // Example: "18.8398239, 98.289310" parses at first comma "," and divides them for use
   let latC = parseFloat(myCoord.split(",")[0]);
   let longC = parseFloat(myCoord.split(",")[1]);
   const center = { lat: latC, lng: longC };
 
-  //GETS API KEY FROM .env
+  /* GETS API KEY FROM .env */
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
@@ -86,6 +100,10 @@ function Gmaps() {
     return <SkeletonText />;
   }
 
+  /* Function for calculating route using user's current location coordinates and
+     chosen destination coordinates. Will be utilized when user clicks on the designated
+     "Calculate Route" button.
+  */
   async function calculateRoute() {
     if (originRef.current.value === "" || destiantionRef.current.value === "") {
       return;
@@ -105,6 +123,9 @@ function Gmaps() {
     setDuration(results.routes[0].legs[0].duration.text);
   }
 
+/* Function for clearing the user's route once finished with the desired navigation 
+   Sets all coordinates to "".
+*/
   function clearRoute() {
     setDirectionsResponse(null);
     setDistance("");
@@ -151,7 +172,7 @@ function Gmaps() {
         minW="container.md"
         zIndex="1"
       >
-        <HStack spacing={2} justifyContent="space-between">
+        <HStack spacing={2} justifyContent="space-between" >
           <Box flexGrow={1}>
             <Autocomplete>
               <Input

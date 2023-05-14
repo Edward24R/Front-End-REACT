@@ -1,4 +1,4 @@
-/* Formating for all pages */
+/* General Formating for all pages */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +35,7 @@ video {
   z-index: -1;
 }
 
-/* Needs a fix */
+
 img {
   /* background-color: rgb(28, 149, 40); */
   object-fit: cover;
@@ -82,35 +82,3 @@ p {
   z-index: -1;
 }
 
-/* body {
-  overflow-x: scroll;
-} */
-
-/* body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-} */
-
-/* hide the scrollbar by default */
-/* .scrollable-content {
-  overflow: hidden;
-}
-
-/* show the scrollbar when content overflows */
-/* .scrollable-content::-webkit-scrollbar {
-  width: 10px;
-}
-.scrollable-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.scrollable-content::-webkit-scrollbar-thumb {
-  background: #888;
-} */ 

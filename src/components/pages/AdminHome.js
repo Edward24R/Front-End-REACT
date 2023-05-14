@@ -1,3 +1,10 @@
+/*
+
+
+
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 // import React from 'react';
 import "../../App.css";
 import Footer from "../ui/Footer";
@@ -10,6 +17,7 @@ import { tokens } from "../theme";
 import LineChart from "../ui/adminRelated/LineChart";
 import Stats from "../ui/adminRelated/DataTable";
 
+import axios from "axios";
 
 //Admin Home Page
 function AdminHome() {

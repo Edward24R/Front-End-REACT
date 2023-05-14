@@ -1,3 +1,12 @@
+/*
+OCards:
+Component that displays card images of the the development team and provides a link functionality for the 
+Contact page. Uses CSS for styling and positioning. The Images are stored in the the public folder file which 
+are called to as a src attribute.
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
+
 import React from 'react';
 import './uiCSS/OurCards.css';
 import OurCardItem from './helpers/OurCardItem';

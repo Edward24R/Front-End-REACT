@@ -1,5 +1,13 @@
+/*
+Contact:
+The Contact Page component is a functional component written in React. 
+It renders the contact information and a logo. It can be navigated to via the
+navigation bar or by clicking on the development team cards within the About information
+page.
+
+~Parkwise-Frontend, Developed by Eduardo Rivera
+*/
 import React from 'react';
-// import '../../App.css';
 import Footer from '../ui/Footer';
 import './pagesCSS/Contact.css'
 

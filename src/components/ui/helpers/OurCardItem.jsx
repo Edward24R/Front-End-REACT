@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//Component Helper for About Page member Cards
+/*Component helper for About page developer cards:
+  Organizes CSS className components and the actual card structure.
+*/
 function OurCardItem(props) {
   return (
     <>

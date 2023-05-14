@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//Component Helper for Home Page Cards
+/*Component helper for Home page cards:
+  Organizes CSS className components and the actual card structure.
+*/
 function CardItem(props) {
   return (
     <>
