@@ -34,7 +34,7 @@ function Cards() {
               src='images/img-5.jpg'
               text='UPRM: Biology Parking Lot'
               label='Coming Soon'
-              path='/home'
+              path='/adminhome'
             />
           </ul>
           <ul className='cards__items'>

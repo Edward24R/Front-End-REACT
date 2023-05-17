@@ -8,14 +8,12 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-
-
 import {Form, Formik } from "formik";
 import * as Yup from "yup";
 import {  ButtonGroup,  VStack } from "@chakra-ui/react";
 import { useNavigate } from "react-router";
 import './userPagesCSS/LogIn.css'
-import ApiService from "../../ServerJWLT/AuthServices"
+import { Link } from 'react-router-dom';
 
 // import {
 //     Box,
@@ -61,18 +59,24 @@ const SignUp = (props) => {
         }
         
         try {
-            const response = ApiService.signin({username: username, password: password, email: email,  isAdmin: false});
+          const response = await axios.post('http://localhost:4000/add-user', {
+                          username,
+                          email,
+                          password,
+                        });
           
             if (response.status === 200) {
+              
               console.log(response);
-              alert('your account have been created, you can now login');
-              props.navigation.navigate('/home');
+              alert('Your account have been created, you can now login');
+              props.navigation.navigate('/home'); //navigate
+
             } else {
               alert(response.data.message);
             }
           } catch (error) {
             console.error(error);
-            alert('An error occurred. Please try again later.');
+            //alert('An error occurred. Please try again later.');
           }
       };
 
@@ -183,13 +187,14 @@ const SignUp = (props) => {
                 </p>
                 {/* Click on submit button to submit the form */}
                     <ButtonGroup pt="1rem">
+                    <Link to="/home">
                     <button  colorScheme="teal" type="submit" 
                     onClick={
                         handleFormSubmit
                             }>
                          Sign Up
                     </button>
-
+                            </Link>
                     <button   colorScheme="green" onClick={() => navigate("/log-in")}>Back</button>
                     </ButtonGroup>
 

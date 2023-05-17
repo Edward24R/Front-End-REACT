@@ -15,8 +15,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Switch} from 'react-r
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 
-import Login from './components/userPages/LogIn2';
-import SignUp from './components/userPages/SignUp2';
+import Login from './components/userPages/LogIn';
+import SignUp from './components/userPages/SignUp';
 
 import Home from './components/pages/Home';
 import Gmaps from './components/pages/Gmaps';

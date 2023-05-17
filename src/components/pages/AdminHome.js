@@ -1,23 +1,16 @@
-/*
-
-
-
-
-~Parkwise-Frontend, Developed by Eduardo Rivera
-*/
+/**
+ * Admin Home:
+ * 
+ * 
+ * ~Parkwise-Frontend, Developed by Eduardo Rivera
+ */
 // import React from 'react';
 import "../../App.css";
-import Footer from "../ui/Footer";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import Table from "../ui/adminRelated/Table";
+import UserDataTable from "../ui/adminRelated/UserTable";
 import React, { useState, useEffect } from "react";
-import Header from "../ui/adminRelated/Header";
-import { tokens } from "../theme";
-import LineChart from "../ui/adminRelated/LineChart";
-import Stats from "../ui/adminRelated/DataTable";
-
-import axios from "axios";
+import { tokens } from "..//ui/theme";
+import ParkingDataTable from "../ui/adminRelated/ParkingLotTable";
 
 //Admin Home Page
 function AdminHome() {
@@ -26,35 +19,10 @@ function AdminHome() {
 
   return (
     <>
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
-        gap="20px"
-      ></Box>
-      <div className="container">
-        <Table />
-      </div>
-      <div>
-        <Box m="20px">
-          <Header subtitle="Parking Spot Occupancy" />
-          <Box height="75vh">
-            <LineChart />
-          </Box>
-        </Box>
-      </div>
-      {/* <div>
-    <Box m="20px">
-      <Header subtitle="Statistics" />
-        <Box height="75vh">
-          <Stats/>
-        </Box>
-    </Box>
-    </div> */}
 
-      <div>
-        <Footer></Footer>
-      </div>
+     <UserDataTable/>
+     <ParkingDataTable/>
+      
     </>
   );
 }

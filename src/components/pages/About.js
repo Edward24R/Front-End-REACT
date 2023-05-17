@@ -12,6 +12,13 @@ import OurCards from '../ui/OurCards';
 import Footer from '../ui/Footer';
 import React from 'react';
 
+import {
+  checkParkingSpotAvailability,
+  getParkingSpotLatitude,
+  getParkingSpotLongitude
+} from '../ui/helpers/axiosFunctions';
+import LatitudeDisplay from '../ui/helpers/GetLat';
+
 /*Info Page about Parkwise and its Members*/
 export default function About() {
 
@@ -33,6 +40,7 @@ export default function About() {
 
 <div>
 <OurCards/>
+{/* <LatitudeDisplay name="a2" /> */}
 <Footer/>
 </div>
 

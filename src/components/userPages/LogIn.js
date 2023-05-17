@@ -19,16 +19,16 @@ import * as Yup from "yup";
 import { Button, ButtonGroup, Heading, VStack } from "@chakra-ui/react";
 import { useNavigate } from "react-router";
 import './userPagesCSS/LogIn.css'
+import { Link } from 'react-router-dom';
 
-
-// const schema = Yup.object().shape({
-//     username: Yup.string()
-//     .required("Username is a required field")
-//     .min(3, "Username must be at least 3 characters"),
-//     password: Yup.string()
-//       .required("Password is a required field")
-//       .min(6, "Password must be at least 6 characters"),
-//   });
+const schema = Yup.object().shape({
+    username: Yup.string()
+    .required("Username is a required field")
+    .min(3, "Username must be at least 3 characters"),
+    password: Yup.string()
+      .required("Password is a required field")
+      .min(6, "Password must be at least 6 characters"),
+  });
 
 
 const Login = (props) => {
@@ -38,22 +38,25 @@ const Login = (props) => {
   const [token, setToken] = useState(localStorage.getItem('token') || '');
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    axios.post('http://192.168.1.85:9193/authenticate/login', { username, password })
-      .then(response => {
-        // Store the JWT token in local storage
-        token = response.data.token;
-        localStorage.setItem('token', token);
 
-        // Redirect the user to the home page
-        props.navigation.navigate('ProfileUser');
-        alert('welcome back', username);
-      })
-      .catch(error => {
-        console.log(error);
-        setError('Invalid username or password');
-      });
-  };
+const handleLogin = () => {
+  axios
+    .post('http://localhost:4000/login', { username, password })
+    .then(response => {
+      // Store the JWT token securely, such as in secure HTTP-only cookies
+      const token = response.data.token;
+      // Store token in secure cookie or secure storage mechanism
+
+      // Redirect the user to the home page
+      // const navigation = useNavigation();
+      props.navigation.navigate('ProfileUser');
+      alert('Welcome back, ' + username);
+    })
+    .catch(error => {
+      console.log(error);
+      setError('Invalid username or password');
+    });
+};
 
   const handleButtonClick = () => {
     handleLogin();
@@ -69,7 +72,7 @@ const Login = (props) => {
     <>
 
 <Formik
-        // validationSchema={schema}
+        validationSchema={schema}
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => {
           // Alert the input values of the form that we filled
@@ -133,9 +136,11 @@ const Login = (props) => {
                     {token ? (
                         <button colorScheme="teal" onClick={handleLogout}>Logout</button>
                          ) : (
+                          <Link to={'/profile'}>
                         <button  colorScheme="teal" type="submit" onClick={handleLogin}  >
                          Log In
                         </button>
+                          </Link>
                         )}
                     
                     <button   colorScheme="green" onClick={() => navigate("/signup")}>Create Account</button>
@@ -147,79 +152,6 @@ const Login = (props) => {
           </VStack>
         )}
       </Formik>
-
-        {/* <View style={{ alignItems: 'center', width: 420 }}>
-            <Text
-                style={{
-                    color: 'black',
-                    fontSize: 30,
-                    fontWeight: 'bold',
-                    marginTop: 20,
-                }}>
-                Welcome Back
-            </Text>
-            <Text
-                style={{
-                    color: 'darkgreen',
-                    fontSize: 19,
-                    fontWeight: 'bold',
-                    marginBottom: 20,
-                }}>
-                Log in to your account{' '}
-            </Text>
-        </View>
-        <View
-            style={{
-                backgroundColor: 'white',
-                height: 720,
-                width: 460,
-                borderTopLeftRadius: 0,
-                paddingTop: 100,
-                alignItems: 'center',
-                shadowOpacity: 1,
-            }}>
-            <Text
-                style={{
-                    color: 'darkgreen',
-                    fontSize: 19,
-                    fontWeight: 'bold',
-                    paddingVertical: 10,
-                    marginVertical: -90,
-                    marginRight: 200,
-                }}>
-                Name:{' '}
-            </Text>
-            <input
-                placeholder="Enter your name"
-                value={username}
-                onChangeText={(text) => setUsername(text)}
-            />
-            <Text
-                style={{
-                    color: 'darkgreen',
-                    fontSize: 19,
-                    fontWeight: 'bold',
-                    paddingVertical: 10,
-                    marginVertical: -90,
-                    marginRight: 170,
-                }}>
-                Password:{' '}
-            </Text>
-            <input
-                placeholder="Enter password"
-                secureTextEntry={true}
-                value={password}
-                onChangeText={(text) => setPassword(text)}
-            />
-       
-        <TouchableOpacity
-            style={styles.button}
-            onPress={handleLogin}
-        >
-            <Text style={styles.buttonText}>Login</Text>
-        </TouchableOpacity>
-        {error && <Text style={styles.error}>{error}</Text>}
-    </View> */}
 </>
 );
 };

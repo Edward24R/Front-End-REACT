@@ -1,5 +1,5 @@
 /*
-Navbar:
+Navbar: W
 Navigation bar component utilized for displaying and interacting with clickable header links for
 page navigation between the application.
 
@@ -131,10 +131,4 @@ function Navbar() {
 }
 
 export default Navbar;
-
-
-function vLink(){
-
-
-}
 

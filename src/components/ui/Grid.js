@@ -1,5 +1,5 @@
 /*
-Grid component:
+Grid component: W
 Organizational component where various individual Grid are positioned and configured with reference to the 
 specified parking lot. Within the component are the GridItems which separate the individual buttons of the
 component. The Grid functions by  
@@ -12,11 +12,11 @@ import React from "react";
 import "./uiCSS/Grid.css";
 import { Link } from "react-router-dom";
 import GridButton from "../Buttons/GridButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../Buttons/ButtonsCSS/GridButton.css";
-import { changeCoord } from "./helpers/functionGrid";
+import { changeCoord } from "./helpers/functionGrid"; //
 import store from "../../store/store";
-import { sendCoord, isLinkAvailable, isColorAvailable } from "./helpers/functionGrid";
+import { changeCoords, isLinkAvailable, isColorAvailable } from "./helpers/functionGrid";
 
 import { Grid, GridItem } from "@chakra-ui/react";
 
@@ -32,11 +32,27 @@ function MyGrid({ parkings }) {
   const [coord, setMyCoord] = useState(false);
 
   //Changes Coords in store file 
-  const handleCoord = (arr, pos) => {
+  // const handleCoord = (arr, pos) => {
+  //   //helper function from store file
+  //   changeCoord(arr, pos);
+  //   return true;
+  // };
+
+  const handleCoord = (pos) => {
     //helper function from store file
-    changeCoord(arr, pos);
+    changeCoords(pos);
     return true;
   };
+
+
+  const a1 = 101;
+  const a2 = 102;
+  const a3 = 103;
+  const a4 = 104;
+  const b1 = 201;
+  const b2 = 202;
+  const b3 = 203;
+
 
   return (
     <div>
@@ -83,13 +99,13 @@ function MyGrid({ parkings }) {
               the rest of the functions. {handleCoord, spotAvailable}
               -validLink: if space is open, button link is to gmaps, else it stays inactive.                                                     */}
               <Link
-                to={`/${validLink(parkingA, 1)}`}
-                onClick={() => handleCoord(parkingA, 1)}
+                to={`/${isLinkAvailable(a1)}`}
+                onClick={() => handleCoord(a1)}
               >
           {/* -handleCoord: sends the coordinates from the parking spot to store.js where it is then
                passed along to GMAPS for use. See GMaps for further details on coordinate use.
               -spotAvailable: is for determining the Color of the button according to its availability*/}
-                <GridButton type={spotAvailable(parkingA, 1)} text="1" />
+                <GridButton type={isColorAvailable(a1)} text="1" />
               </Link>
             </div>
           </GridItem>
@@ -97,10 +113,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingA, 2)}`}
-                onClick={() => handleCoord(parkingA, 2)}
+                to={`/${isLinkAvailable(a2)}`}
+                onClick={() => handleCoord(a2)}
               >
-                <GridButton type={spotAvailable(parkingA, 2)} text="2" />
+                <GridButton type={isColorAvailable(a2)} text="2" />
               </Link>
             </div>
           </GridItem>
@@ -108,10 +124,10 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingA, 3)}`}
-                onClick={() => handleCoord(parkingA, 23)}
+                to={`/${isLinkAvailable(a3)}`}
+                onClick={() => handleCoord(a3)}
               >
-                <GridButton type={spotAvailable(parkingA, 3)} text="3" />
+                <GridButton type={isColorAvailable(a3)} text="3" />
               </Link>
             </div>
           </GridItem>
@@ -119,15 +135,15 @@ function MyGrid({ parkings }) {
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
-                to={`/${validLink(parkingA, 4)}`}
-                onClick={() => handleCoord(parkingA, 4)}
+                to={`/${isLinkAvailable(a4)}`}
+                onClick={() => handleCoord(a4)}
               >
-                <GridButton type={spotAvailable(parkingA, 4)} text="4" />
+                <GridButton type={isColorAvailable(a4)} text="4" />
               </Link>
             </div>
           </GridItem>
 
-          <GridItem {...baseStyle}>
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -239,7 +255,7 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingA, 1)} text="14" />
               </Link>
             </div>
-          </GridItem>
+          </GridItem> */}
         </Grid>
       </div>
 
@@ -251,7 +267,7 @@ function MyGrid({ parkings }) {
           className="gridPosB"
           h="145%"
         >
-          <GridItem
+          {/* <GridItem
             className="gridBack2"
             bg="yellow"
             p="4"
@@ -287,8 +303,8 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingB, 2)} text="2" />
               </Link>
             </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
+          </GridItem> */}
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -479,7 +495,7 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingB, 2)} text="19" />
               </Link>
             </div>
-          </GridItem>
+          </GridItem> */}
         </Grid>
       </div>
 
@@ -506,7 +522,7 @@ function MyGrid({ parkings }) {
             </div>
           </GridItem>
 
-          <GridItem {...baseStyle}>
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -527,8 +543,8 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingC, 2)} text="2" />
               </Link>
             </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
+          </GridItem> */}
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -764,7 +780,7 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingC, 1)} text="23" />
               </Link>
             </div>
-          </GridItem>
+          </GridItem> */}
         </Grid>
       </div>
 
@@ -791,7 +807,7 @@ function MyGrid({ parkings }) {
             </div>
           </GridItem>
 
-          <GridItem {...baseStyle}>
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -812,8 +828,8 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingD, 2)} text="2" />
               </Link>
             </div>
-          </GridItem>
-          <GridItem {...baseStyle}>
+          </GridItem> */}
+          {/* <GridItem {...baseStyle}>
             <div style={{ display: "flex", justifyContent: "center" }}>
               {" "}
               <Link
@@ -1038,7 +1054,7 @@ function MyGrid({ parkings }) {
                 <GridButton type={spotAvailable(parkingD, 2)} text="22" />
               </Link>
             </div>
-          </GridItem>
+          </GridItem> */}
         </Grid>
       </div>
     </div>
